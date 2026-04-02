@@ -1,8 +1,11 @@
 # Awald
 
-> Statistical computing environment for the next generation of empirical researchers.
+> Empirical research belongs to everyone.
 
-**Awald** is an open-source desktop application that replaces Stata for applied microeconomics, health policy, and causal inference workflows. It combines a zero-copy data editor, a linearly-executed script environment, and publication-ready output tables — powered by Python's econometrics ecosystem inside a native Rust shell.
+**Awald** is open-source statistical computing for applied researchers — a transparent, reproducible environment where every result can be verified, every method can be inspected, and every researcher can
+participate regardless of institution or budget.
+
+Built on Python's econometrics ecosystem inside a native Rust shell. MIT licensed.
 
 [![Status](https://img.shields.io/badge/status-pre--alpha-red)](https://github.com/awald-app/awald)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -13,19 +16,20 @@
 
 ## Why Awald
 
-Stata's statistical engine is written in C. Its GUI is a thin shell — a form builder connected to a terminal. The computational gap between Stata and Python has closed. The gap that remains is the shell: a fast data editor, a reproducible script environment, and output that looks like a paper.
+Empirical research has long depended on proprietary tools: closed source, license-gated, expensive, and opaque at the computational level. Researchers cannot audit what the software does. Institutions in LMICs cannot afford the same methods as well-funded universities. Replication depends on who owns a license, not who has the data and the question.
 
-Awald is that shell.
+The statistical methods themselves are not proprietary. The implementations have been open for years. What was missing was the environment — a fast data editor, a reproducible script runner, and output that looks like a paper.
 
-| Capability | Stata | Awald |
+Awald is that environment.
+
+| Feature | Proprietary tools | Awald |
 |---|---|---|
-| Fixed effects regression | `reghdfe` | `pyfixest` (same syntax) |
-| Publication tables | `esttab` | `tidyecon.modelsummary()` |
-| Data editor | Custom C widget | Polars zero-copy + virtual scroll |
-| Script execution | `.do` file, linear | Script editor, linear, guaranteed |
-| Output format | SMCL | HTML / LaTeX / Word |
-| Cost | $595–$1,595/yr | Free |
-| Source | Closed | Open |
+| Cost | $500–$1,600/yr | Free |
+| Source code | Closed | Open (MIT) |
+| Reproducibility | Installer-dependent | Standard Python packages |
+| LMIC access | License-gated | Unrestricted |
+| Auditability | Black box | Full source |
+| Output | Proprietary formats | HTML / LaTeX / Word |
 
 ---
 
