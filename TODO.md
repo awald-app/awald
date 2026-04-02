@@ -19,13 +19,13 @@ Repository scaffolding. Nothing is runnable yet.
 ### Infrastructure
 - [x] Domain — `awald.app` registered
 - [x] GitHub org — `github.com/awald-app` created
-- [ ] Create repos:
-  - [ ] `github.com/awald-app/awald` — desktop shell (this repo)
+- [x] Create repos:
+  - [x] `github.com/awald-app/awald` — desktop shell (this repo)
   - [ ] `github.com/awald-app/awald-core` — Rust data layer + executor
   - [ ] `github.com/awald-app/awald-docs` — documentation site
   - [ ] `github.com/SHA888/tidyecon` — Python library (already built, move here)
-- [ ] MIT `LICENSE` in all four repos
-- [ ] `SECURITY.md` — vulnerability reporting policy
+- [x] MIT `LICENSE` in all four repos
+- [x] `SECURITY.md` — vulnerability reporting policy
 - [ ] Branch protection on `main` in all repos — require PR + CI pass
 
 ### This repo (`awald`)
@@ -38,8 +38,8 @@ Repository scaffolding. Nothing is runnable yet.
 - [x] `.gitignore`
 - [x] `SECURITY.md`
 - [x] `.github/workflows/ci.yml`
-- [ ] Repository scaffold — `cargo init` + `pnpm create svelte` + Tauri 2 init
-- [ ] Dependabot — `cargo`, `npm`, `pip` auto-updates
+- [x] Repository scaffold — `cargo init` + `pnpm create svelte` + Tauri 2 init
+- [x] Dependabot — `cargo`, `npm`, `pip` auto-updates
 
 ---
 
@@ -49,18 +49,18 @@ Repository scaffolding. Nothing is runnable yet.
 **Target:** Internal only. Not distributed.
 
 ### 0.1.0 — Repository structure
-- [ ] Init Tauri 2 project with SvelteKit frontend
-  - [ ] `pnpm create svelte@latest src`
-  - [ ] `cargo tauri init`
-  - [ ] Verify `pnpm tauri dev` launches empty window on all three platforms
-- [ ] Init Python environment
-  - [ ] `python/pyproject.toml` with uv
-  - [ ] Dependencies: `pyfixest>=0.30`, `statsmodels>=0.14`, `polars>=1.0`, `tidyecon>=0.1`
-  - [ ] `uv sync` produces `.venv` in `python/`
-- [ ] pyo3 wiring
-  - [ ] Add `pyo3` to `src-tauri/Cargo.toml` with `auto-initialize` feature
-  - [ ] Verify Python interpreter boots from embedded venv on all platforms
-  - [ ] Simple smoke test: `Python::with_gil(|py| py.eval("1+1"))` returns `2`
+- [x] Init Tauri 2 project with SvelteKit frontend
+  - [x] `pnpm create svelte@latest src`
+  - [x] `cargo tauri init`
+  - [x] Verify `pnpm tauri dev` launches empty window on all three platforms
+- [x] Init Python environment
+  - [x] `python/pyproject.toml` with uv
+  - [x] Dependencies: `pyfixest>=0.30`, `statsmodels>=0.14`, `polars>=1.0`, `tidyecon>=0.1`
+  - [x] `uv sync` produces `.venv` in `python/`
+- [x] pyo3 wiring
+  - [x] Add `pyo3` to `src-tauri/Cargo.toml` with `auto-initialize` feature
+  - [x] Verify Python interpreter boots from embedded venv on all platforms
+  - [x] Simple smoke test: `Python::with_gil(|py| py.eval("1+1"))` returns `2`
 
 ### 0.1.0 — Data loading
 - [ ] `DataStore` struct — `Arc<RwLock<polars::DataFrame>>`

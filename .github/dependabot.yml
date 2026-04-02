@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Rust dependencies
+  - package-ecosystem: "cargo"
+    directory: "/src-tauri"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "awald-app/maintainers"
+    assignees:
+      - "awald-app/maintainers"
+
+  # npm/pnpm dependencies
+  - package-ecosystem: "npm"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "awald-app/maintainers"
+    assignees:
+      - "awald-app/maintainers"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "awald-app/maintainers"
+    assignees:
+      - "awald-app/maintainers"

@@ -1,0 +1,58 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+
+  - repo: local
+    hooks:
+      - id: rust-fmt
+        name: rust fmt
+        entry: cargo fmt
+        language: system
+        args: ['--manifest-path', 'src-tauri/Cargo.toml', '--']
+        pass_filenames: false
+        files: src-tauri/.*\.rs$
+
+      - id: rust-clippy
+        name: rust clippy
+        entry: cargo clippy
+        language: system
+        args: ['--manifest-path', 'src-tauri/Cargo.toml', '--', '-D', 'warnings']
+        pass_filenames: false
+        files: src-tauri/.*\.rs$
+
+      - id: svelte-check
+        name: svelte type check
+        entry: pnpm
+        language: system
+        args: ['check']
+        pass_filenames: false
+        files: src/.*\.(svelte|ts|js)$
+
+      - id: eslint-svelte
+        name: eslint for svelte
+        entry: pnpm
+        language: system
+        args: ['lint']
+        pass_filenames: false
+        files: src/.*\.(svelte|ts|js)$
+
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        files: python/.*\.py$
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.0
+    hooks:
+      - id: ruff
+        files: python/.*\.py$
+        args: [--config=python/pyproject.toml]
