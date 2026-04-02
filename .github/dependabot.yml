@@ -10,6 +10,10 @@ updates:
       - "awald-app/maintainers"
     assignees:
       - "awald-app/maintainers"
+    ignore:
+      # Ignore pyo3 major/minor updates (breaking changes)
+      - dependency-name: "pyo3"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
 
   # npm/pnpm dependencies
   - package-ecosystem: "npm"
