@@ -1,15 +1,17 @@
 mod data;
 
 use pyo3::prelude::*;
-use pyo3::Python;
+use pyo3::types::PyAnyMethods;
+use std::ffi::CString;
 
 use data::{get_rows, load_file, DataStore};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     // pyo3 smoke test
-    Python::with_gil(|py| {
-        let result = py.eval_bound("1+1", None, None).unwrap();
+    Python::attach(|py| {
+        let code = CString::new("1+1").unwrap();
+        let result = py.eval(&code, None, None).unwrap();
         let value: i32 = result.extract().unwrap();
         println!("Python smoke test result: {}", value);
         assert_eq!(value, 2);

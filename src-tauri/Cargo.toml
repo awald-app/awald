@@ -24,7 +24,7 @@ log = "0.4"
 tauri = { version = "2.5.0", features = [] }
 tauri-plugin-log = "2.0.0-rc"
 tauri-plugin-dialog = "2.0.0-rc"
-pyo3 = { version = "0.21", features = ["auto-initialize"] }
-polars = { version = "0.44", features = ["lazy", "csv", "json", "serde"] }
+pyo3 = { version = "0.28", features = ["auto-initialize"] }
+polars = { version = "0.53", features = ["lazy", "csv", "json", "serde"] }
 tokio = { version = "1.0", features = ["full"] }
 uuid = { version = "1.0", features = ["v4", "serde"] }

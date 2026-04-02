@@ -69,6 +69,10 @@ Repository scaffolding. Nothing is runnable yet.
   - [x] Returns `{nrows, ncols, schema: [{name, dtype}]}`
 - [x] Frontend: file picker dialog (`@tauri-apps/plugin-dialog`)
 - [x] Frontend: displays `{filename} — {nrows} rows × {ncols} cols` in status bar
+- [x] pyo3 upgrade: v0.22 → v0.28 with modern `Python::attach()` API
+  - [x] Updated dependencies: pyo3 0.28, polars 0.53
+  - [x] Migrated smoke test to use `Python::attach()` and `CString`
+  - [x] All tests pass, smoke test prints "Python smoke test result: 2"
 
 ### 0.1.0 — Minimal data view
 - [ ] Tauri command: `get_rows(start: usize, end: usize) -> Result<Vec<RowData>>`

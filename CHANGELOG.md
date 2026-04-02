@@ -17,6 +17,16 @@ Versioning: [SemVer 2.0.0](https://semver.org).
 - Domain `awald.app` registered
 - GitHub org `github.com/awald-app` created
 
+### Changed
+- **pyo3**: upgraded from v0.22 to v0.28 with modern `Python::attach()` API
+- **polars**: upgraded from v0.44 to v0.53 for pyo3 0.28 compatibility
+- Updated smoke test to use `CString` for Python code evaluation
+- Updated README.md tech stack table with current versions
+
+### Fixed
+- pyo3 smoke test now works with modern API patterns
+- Dependabot config updated to allow pyo3 patch updates (0.28.x)
+
 ---
 
 ## [0.1.0] — TBD

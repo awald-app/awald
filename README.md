@@ -67,8 +67,8 @@ Full architecture details in [`ARCHITECTURE.md`](ARCHITECTURE.md).
 | Desktop shell | [Tauri 2](https://v2.tauri.app) | 2.10.x |
 | UI framework | [SvelteKit](https://kit.svelte.dev) | 2.x |
 | Core language | Rust | 1.82+ (stable) |
-| Python bridge | [pyo3](https://pyo3.rs) | 0.24.x |
-| Data engine | [Polars](https://pola.rs) | 1.x |
+| Python bridge | [pyo3](https://pyo3.rs) | 0.28.x |
+| Data engine | [Polars](https://pola.rs) | 0.53.x |
 | Regression | [pyfixest](https://github.com/py-econometrics/pyfixest) | 0.30.x |
 | Statistics | [statsmodels](https://www.statsmodels.org) | 0.14.x |
 | Output tables | [tidyecon](https://github.com/SHA888/tidyecon) | 0.1.x |
