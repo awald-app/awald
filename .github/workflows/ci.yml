@@ -37,7 +37,7 @@ jobs:
 
       # ── Node / pnpm ───────────────────────────────────────────────────────
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
           version: latest
 
@@ -122,7 +122,7 @@ jobs:
         with:
           workspaces: src-tauri
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v5
         with:
           version: latest
       - uses: actions/setup-node@v4
