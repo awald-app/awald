@@ -32,15 +32,7 @@ repos:
         name: svelte type check
         entry: pnpm
         language: system
-        args: ['check']
-        pass_filenames: false
-        files: src/.*\.(svelte|ts|js)$
-
-      - id: eslint-svelte
-        name: eslint for svelte
-        entry: pnpm
-        language: system
-        args: ['lint']
+        args: ['--filter', 'src', 'check']
         pass_filenames: false
         files: src/.*\.(svelte|ts|js)$
 

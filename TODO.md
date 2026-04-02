@@ -63,12 +63,12 @@ Repository scaffolding. Nothing is runnable yet.
   - [x] Simple smoke test: `Python::with_gil(|py| py.eval("1+1"))` returns `2`
 
 ### 0.1.0 — Data loading
-- [ ] `DataStore` struct — `Arc<RwLock<polars::DataFrame>>`
-- [ ] Tauri command: `load_file(path: String) -> Result<DatasetMeta>`
-  - [ ] Supports `.csv` via `CsvReadOptions`
-  - [ ] Returns `{nrows, ncols, schema: [{name, dtype}]}`
-- [ ] Frontend: file picker dialog (`@tauri-apps/plugin-dialog`)
-- [ ] Frontend: displays `{filename} — {nrows} rows × {ncols} cols` in status bar
+- [x] `DataStore` struct — `Arc<RwLock<polars::DataFrame>>`
+- [x] Tauri command: `load_file(path: String) -> Result<DatasetMeta>`
+  - [x] Supports `.csv` via `CsvReadOptions`
+  - [x] Returns `{nrows, ncols, schema: [{name, dtype}]}`
+- [x] Frontend: file picker dialog (`@tauri-apps/plugin-dialog`)
+- [x] Frontend: displays `{filename} — {nrows} rows × {ncols} cols` in status bar
 
 ### 0.1.0 — Minimal data view
 - [ ] Tauri command: `get_rows(start: usize, end: usize) -> Result<Vec<RowData>>`
