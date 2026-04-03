@@ -75,12 +75,13 @@ Repository scaffolding. Nothing is runnable yet.
   - [x] All tests pass, smoke test prints "Python smoke test result: 2"
 
 ### 0.1.0 — Minimal data view
-- [ ] Tauri command: `get_rows(start: usize, end: usize) -> Result<Vec<RowData>>`
-  - [ ] Returns JSON-serialized slice of DataFrame
-  - [ ] No pagination logic yet — just returns requested range
-- [ ] Frontend: static HTML table (no virtual scroll yet)
-  - [ ] Renders first 100 rows
-  - [ ] Column headers from schema
+- [x] Tauri command: `get_rows(start: usize, end: usize) -> Result<Vec<RowData>>`
+  - [x] Returns JSON-serialized slice of DataFrame
+  - [x] No pagination logic yet — just returns requested range
+- [x] Frontend: static HTML table (no virtual scroll yet)
+  - [x] Renders first 100 rows
+  - [x] Column headers from schema
+  - [x] Responsive table with sticky headers and hover effects
 
 ### 0.1.0 — Script execution
 - [ ] `Executor` struct with `Mutex<()>` GIL guard
