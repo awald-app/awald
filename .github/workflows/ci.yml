@@ -72,6 +72,9 @@ jobs:
         run: uv sync --directory python
 
       # ── Lint ─────────────────────────────────────────────────────────────
+      - name: Build frontend for Tauri config validation
+        run: pnpm build
+
       - name: Rust fmt check
         run: cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
 

@@ -26,7 +26,7 @@ repos:
         language: system
         args: ['--manifest-path', 'src-tauri/Cargo.toml', '--', '-D', 'warnings']
         pass_filenames: false
-        files: ^(src-tauri/.*\.rs|src-tauri/Cargo\.toml)$
+        files: src-tauri/.*\.rs$
 
       - id: svelte-check
         name: svelte type check
