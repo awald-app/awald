@@ -17,7 +17,7 @@ jobs:
           - platform: linux
             os: ubuntu-22.04
           - platform: macos
-            os: macos-13
+            os: macos-14
           - platform: windows
             os: windows-latest
 
@@ -38,8 +38,6 @@ jobs:
       # ── Node / pnpm ───────────────────────────────────────────────────────
       - name: Setup pnpm
         uses: pnpm/action-setup@v5
-        with:
-          version: latest
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -110,7 +108,7 @@ jobs:
           - platform: linux
             os: ubuntu-22.04
           - platform: macos
-            os: macos-13
+            os: macos-14
           - platform: windows
             os: windows-latest
 
@@ -123,8 +121,6 @@ jobs:
           workspaces: src-tauri
 
       - uses: pnpm/action-setup@v5
-        with:
-          version: latest
       - uses: actions/setup-node@v6
         with:
           node-version: 22
