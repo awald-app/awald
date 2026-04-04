@@ -85,14 +85,14 @@ jobs:
         run: pnpm --filter src check
 
       - name: Python lint (ruff)
-        run: uv run --directory python ruff check python/
+        run: uv run --directory python ruff check .
 
       # ── Test ─────────────────────────────────────────────────────────────
       - name: Rust tests
         run: cargo test --manifest-path src-tauri/Cargo.toml
 
       - name: Python tests
-        run: uv run --directory python pytest python/tests/ -q
+        run: uv run --directory python pytest . -q
 
       # ── Security ─────────────────────────────────────────────────────────
       - name: cargo-audit
