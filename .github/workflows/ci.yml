@@ -82,7 +82,7 @@ jobs:
         run: cargo clippy --manifest-path src-tauri/Cargo.toml -- -D warnings
 
       - name: Svelte type check
-        run: pnpm check
+        run: pnpm --filter src check
 
       - name: Python lint (ruff)
         run: uv run --directory python ruff check python/
